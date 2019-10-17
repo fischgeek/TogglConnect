@@ -48,18 +48,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SharedLibrary\SharedLibrary.csproj">
-      <Project>{3467f34e-fe77-461a-88c7-af7c1f1c0619}</Project>
-      <Name>SharedLibrary</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json">
       <Version>12.0.2</Version>
     </PackageReference>
     <PackageReference Include="RestSharp">
       <Version>106.6.10</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\SharedLibrary\SharedLibrary.csproj">
+      <Project>{3467f34e-fe77-461a-88c7-af7c1f1c0619}</Project>
+      <Name>SharedLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

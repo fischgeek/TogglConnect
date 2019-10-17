@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TogglConnect", "TogglConnect\TogglConnect.csproj", "{70064453-40DA-479A-94B4-025FAF835D27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedLibrary", "SharedLibrary\SharedLibrary.csproj", "{3467F34E-FE77-461A-88C7-AF7C1F1C0619}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedLibrary", "..\SharedLibrary\SharedLibrary.csproj", "{3467F34E-FE77-461A-88C7-AF7C1F1C0619}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
