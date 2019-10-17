@@ -54,7 +54,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\AutoToggl - Copy\SharedLibrary\SharedLibrary.csproj">
+    <ProjectReference Include="..\..\SharedLibrary\SharedLibrary.csproj">
       <Project>{3467f34e-fe77-461a-88c7-af7c1f1c0619}</Project>
       <Name>SharedLibrary</Name>
     </ProjectReference>
