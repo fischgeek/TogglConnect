@@ -7,9 +7,9 @@ namespace TogglConnectTest
     [TestClass]
     public class UnitTest
     {
-        private static string apiKey = "97451a38777d7ad9a46f493f63b370c4";
-        private static int wid = 2484306;
-        private static int pid = 155507709;
+        private static string apiKey = "";
+        private static int wid = 0;
+        private static int pid = 0;
         private TogglBase tb;
 
         private void Init()
