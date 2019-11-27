@@ -65,6 +65,15 @@ namespace TogglConnect
             return t;
         }
 
+        public Project GetProject(int projectId)
+        {
+            var url = $"{baseUrl}/projects/{projectId}";
+            var x = WebCall.GetRequestWithErrorHandling(url, this.authString);
+            var t = JsonConvert.DeserializeObject<ProjectData>(x.Data);
+            var proj = t.data;
+            return proj;
+        }
+
         public TimeEntry GetRunningTimer()
         {
             var x = WebCall.GetRequestWithErrorHandling($"{baseUrl}/time_entries/current", this.authString);
