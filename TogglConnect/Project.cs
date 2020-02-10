@@ -19,6 +19,6 @@ namespace TogglConnect
         public int pid { get; set; }
         public string name { get; set; }
         public bool active { get; set; }
-        public List<string> keywords { get; set; }
+        //public List<string> keywords { get; set; }
     }
 }
