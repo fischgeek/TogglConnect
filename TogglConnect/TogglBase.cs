@@ -82,10 +82,11 @@ namespace TogglConnect
             return timeEntry;
         }
 
-        public void StartTimer(TimeEntryWrapper wrapper)
+        public WebResult StartTimer(TimeEntryWrapper wrapper)
         {
             var url = $"{baseUrl}/time_entries/start";
-            var x = WebCall.PostRequestWithErrorHandling(url, wrapper, this.authString);
+            var res = WebCall.PostRequestWithErrorHandling(url, wrapper, this.authString);
+            return res;
         }
 
         public void StopRunningTimer()
@@ -106,6 +107,16 @@ namespace TogglConnect
                 return $"{ts.Days}d {ts.Hours}h {ts.Minutes}m {ts.Seconds}s";
             }
             return "00:00:00";
+        }
+
+        public TimeSpan CalculateDuration(int duration) => new TimeSpan(0, 0, JFUtil.SecondsSinceEpoch() + duration);
+
+        public T UnwrapWebResult<T>(WebResult wr)
+        {
+            if (wr.CallWasSuccessful) {
+                return JsonConvert.DeserializeObject<T>(wr.Data);
+            }
+            return default(T);
         }
     }
 }
